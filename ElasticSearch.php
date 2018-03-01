@@ -17,6 +17,8 @@
         private function call($method, $endpoint, array $datas) {
             $opts = array('http' =>
                   array(
+                      'header'  => "Content-Type: application/x-www-form-urlencoded\r\n".
+                                   "Content-Length: 0\r\n",
                       'method'  => $method,
                       'content' => json_encode($datas)
                   ),
